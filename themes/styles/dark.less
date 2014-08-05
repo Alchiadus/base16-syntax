@@ -1,0 +1,250 @@
+// This defines all syntax variables that syntax themes must implement when they
+// include a syntax-variables.less file.
+
+// General colors
+@syntax-text-color: @base16-color-base05;
+@syntax-cursor-color: @base16-color-base05;
+@syntax-selection-color: @base16-color-base02;
+@syntax-background-color: @base16-color-base00;
+
+// Guide colors
+@syntax-wrap-guide-color: @base16-color-base03;
+@syntax-indent-guide-color: @base16-color-base03;
+@syntax-invisible-character-color: @base16-color-base03;
+
+// For find and replace markers
+@syntax-result-marker-color: @base16-color-base03;
+@syntax-result-marker-color-selected: @base16-color-base05;
+
+// Gutter colors
+@syntax-gutter-text-color: @base16-color-base05;
+@syntax-gutter-text-color-selected: @base16-color-base05;
+@syntax-gutter-background-color: @base16-color-base00;
+@syntax-gutter-background-color-selected: fade(@base16-color-base03, 33%);
+
+// For git diff info. i.e. in the gutter
+// These are static and were not extracted from your textmate theme
+@syntax-color-renamed: #96CBFE;
+@syntax-color-added: #A8FF60;
+@syntax-color-modified: #E9C062;
+@syntax-color-removed: #CC6666;
+
+.editor {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+}
+
+.editor .gutter {
+  background-color: @syntax-gutter-background-color;
+  color: @syntax-gutter-text-color;
+}
+
+.editor .gutter .line-number.cursor-line {
+  background-color: @syntax-gutter-background-color-selected;
+  color: @syntax-gutter-text-color-selected;
+}
+
+.editor .gutter .line-number.cursor-line-no-selection {
+  color: @syntax-gutter-text-color-selected;
+}
+
+.editor .wrap-guide {
+  color: @syntax-wrap-guide-color;
+}
+
+.editor .indent-guide {
+  color: @syntax-indent-guide-color;
+}
+
+.editor .invisible-character {
+  color: @syntax-invisible-character-color;
+}
+
+.editor .search-results .marker .region {
+  background-color: transparent;
+  border: @syntax-result-marker-color;
+}
+
+.editor .search-results .marker.current-result .region {
+  border: @syntax-result-marker-color-selected;
+}
+
+.editor.is-focused .cursor {
+  border-color: @syntax-cursor-color;
+}
+
+.editor.is-focused .selection .region {
+  background-color: @syntax-selection-color;
+}
+
+// .editor.is-focused .line-number.cursor-line-no-selection, .editor.is-focused .line.cursor-line {
+//   background-color: fade(@base16-color-base03, 33%);
+// }
+
+.variable.parameter.function {
+  color: @base16-color-base05;
+}
+
+.comment, .punctuation.definition.comment {
+  color: @base16-color-base03;
+}
+
+.punctuation.definition.string, .punctuation.definition.variable, .punctuation.definition.string, .punctuation.definition.parameters, .punctuation.definition.string, .punctuation.definition.array {
+  color: @base16-color-base05;
+}
+
+.none {
+  color: @base16-color-base05;
+}
+
+.keyword.operator {
+  color: @base16-color-base05;
+}
+
+.keyword {
+  color: @base16-color-base0E;
+}
+
+.variable {
+  color: @base16-color-base08;
+}
+
+.entity.name.function, .meta.require, .support.function.any-method {
+  color: @base16-color-base0D;
+}
+
+.support.class, .entity.name.class, .entity.name.type.class {
+  color: @base16-color-base0A;
+}
+
+.meta.class {
+  color: @base16-color-base07;
+}
+
+.keyword.other.special-method {
+  color: @base16-color-base0D;
+}
+
+.storage {
+  color: @base16-color-base0E;
+}
+
+.support.function {
+  color: @base16-color-base0C;
+}
+
+.string, .constant.other.symbol, .entity.other.inherited-class {
+  color: @base16-color-base0B;
+}
+
+.constant.numeric {
+  color: @base16-color-base09;
+}
+
+.none {
+  color: @base16-color-base09;
+}
+
+.none {
+  color: @base16-color-base09;
+}
+
+.constant {
+  color: @base16-color-base09;
+}
+
+.entity.name.tag {
+  color: @base16-color-base08;
+}
+
+.entity.other.attribute-name {
+  color: @base16-color-base09;
+}
+
+.entity.other.attribute-name.id, .punctuation.definition.entity {
+  color: @base16-color-base0D;
+}
+
+.meta.selector {
+  color: @base16-color-base0E;
+}
+
+.none {
+  color: @base16-color-base09;
+}
+
+.markup.heading .punctuation.definition.heading, .entity.name.section {
+  color: @base16-color-base0D;
+}
+
+.keyword.other.unit {
+  color: @base16-color-base09;
+}
+
+.markup.bold, .punctuation.definition.bold {
+  font-weight: bold;
+  color: @base16-color-base0A;
+}
+
+.markup.italic, .punctuation.definition.italic {
+  font-style: italic;
+  color: @base16-color-base0E;
+}
+
+.markup.raw.inline {
+  color: @base16-color-base0B;
+}
+
+.string.other.link {
+  color: @base16-color-base08;
+}
+
+.meta.link {
+  color: @base16-color-base09;
+}
+
+.markup.list {
+  color: @base16-color-base08;
+}
+
+.markup.quote {
+  color: @base16-color-base09;
+}
+
+.meta.separator {
+  color: @base16-color-base05;
+  background-color: @base16-color-base02;
+}
+
+.markup.inserted {
+  color: @base16-color-base0B;
+}
+
+.markup.deleted {
+  color: @base16-color-base08;
+}
+
+.markup.changed {
+  color: @base16-color-base0E;
+}
+
+.constant.other.color {
+  color: @base16-color-base0C;
+}
+
+.string.regexp {
+  color: @base16-color-base0C;
+}
+
+.constant.character.escape {
+  color: @base16-color-base0C;
+}
+
+.punctuation.section.embedded, .variable.interpolation {
+  color: @base16-color-base0F;
+}
+
+.invalid.illegal {
+  color: @base16-color-base00;
+  background-color: @base16-color-base08;
+}
