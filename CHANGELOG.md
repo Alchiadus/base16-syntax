@@ -1,3 +1,9 @@
+0.1.1
+=====
+
+## Bug Fixes
+- Fix preview link in README
+
 0.1.0
 =====
 
