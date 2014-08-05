@@ -3,7 +3,7 @@ Base16 Syntax Theme
 
 A Base16 syntax theme with support for all Base16 color schemes and styles.
 
-![Base16 Syntax Preview](preview.gif)
+![Base16 Syntax Preview](https://raw.githubusercontent.com/Alchiadus/base16-syntax/master/preview.gif)
 
 The following Base16 color schemes are included:
 - 3024
