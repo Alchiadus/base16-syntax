@@ -1,8 +1,14 @@
+0.1.2
+=====
+
+## Bug Fixes
+- Fixed an issue on Ubuntu where less stylesheets could not be compiled.
+
 0.1.1
 =====
 
 ## Bug Fixes
-- Fix preview link in README
+- Fixed preview link in README.
 
 0.1.0
 =====
