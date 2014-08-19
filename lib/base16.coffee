@@ -45,7 +45,7 @@ class Base16
 
   getSchemeImport: (scheme) ->
     """
-    @import "#{@getSchemesDir()}/#{scheme}";
+    @import "../schemes/#{scheme}";
     """
 
   enableDefaultTheme: ->
