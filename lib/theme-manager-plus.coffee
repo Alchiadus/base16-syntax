@@ -14,7 +14,7 @@ class ThemeManagerPlus
   #                      prepended to the content of the stylesheet.
   #
   # Returns the absolute path to the required stylesheet.
-  requireLessStylesheet: (lessStylesheetPath, preliminaryContent='') ->
+  requireLessStylesheet: (lessStylesheetPath, preliminaryContent = '') ->
     if fullPath = atom.themes.resolveStylesheet lessStylesheetPath
       content = @loadLessStylesheet fullPath, preliminaryContent
       atom.themes.applyStylesheet fullPath, content
@@ -22,7 +22,7 @@ class ThemeManagerPlus
       throw new Error "Could not find a file at path '#{lessStylesheetPath}'"
     fullPath
 
-  loadLessStylesheet: (lessStylesheetPath, preliminaryContent='') ->
+  loadLessStylesheet: (lessStylesheetPath, preliminaryContent = '') ->
     try
       if preliminaryContent isnt ''
         lessContent = fs.readFileSync lessStylesheetPath, 'utf8'
