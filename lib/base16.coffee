@@ -8,12 +8,9 @@ class Base16
     @packageName = require('../package.json').name
     atom.config.setDefaults "#{@packageName}", scheme: 'default'
     atom.config.setDefaults "#{@packageName}", style: 'dark'
-    enabledThemes = atom.config.get('core.themes').toString()
-    if /dark/.test enabledThemes
-      atom.config.setDefaults "#{@packageName}", matchUserInterfaceTheme: true
-    else if /light/.test enabledThemes
+    if /light/.test atom.config.get('core.themes').toString()
       atom.config.setDefaults "#{@packageName}", style: 'light'
-      atom.config.setDefaults "#{@packageName}", matchUserInterfaceTheme: true
+    atom.config.setDefaults "#{@packageName}", matchUserInterfaceTheme: true
     atom.config.observe "#{@packageName}.scheme", => @enableConfigTheme()
     atom.config.observe "#{@packageName}.style", => @enableConfigTheme()
     atom.workspaceView.command "#{@packageName}:select-theme", @createSelectListView
