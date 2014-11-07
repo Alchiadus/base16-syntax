@@ -56,9 +56,11 @@ Base16 Syntax can be enabled by going to the _Settings_ view (`cmd-,`). Select t
 
 The `Default (Light)` syntax theme is loaded when using a light UI theme and the `Default (Dark)` syntax theme is loaded when using a dark UI theme or when a dark or light UI theme could not be detected.
 
-The theme can be changed by toggling the _Command Palette_ (`ctrl-shift-P`). Type in `Base16 Syntax: Select Theme` and choose another theme from the list. While browsing through the list of available themes a live preview of each selected theme is automatically applied to all open files.
+The theme can be changed by choosing a different `scheme` or `style` from the drop down menu in the `Base16 Syntax` _Settings_ view.
 
-Note: by default, only the styles matching the UI theme are shown, i.e. only dark styles are shown when using a dark UI theme and only light styles are shown when using a light UI theme. This can be disabled by going to the _Settings_ view (`cmd-,`). Select the `Base16 Syntax` package section on the left side and uncheck `Match User Interface Theme`. This setting will be unavailable if a dark or light UI theme could not be detected; both dark and light styles will be shown automatically.
+Alternatively, the theme can be changed in the Preview Mode. Toggle the _Command Palette_ (`ctrl-shift-P`). Type in `Base16 Syntax: Select Theme` and choose another theme from the list. While browsing through the list of available themes a live preview of each selected theme is automatically applied to all open files.
+
+Note: by default, only the styles matching the UI theme are shown in the Preview Mode, i.e. only dark styles are shown when using a dark UI theme and only light styles are shown when using a light UI theme. This can be disabled by going to the _Settings_ view (`cmd-,`). Select the `Base16 Syntax` package section on the left side and uncheck `Match User Interface Theme`.
 
 ## Credits
 

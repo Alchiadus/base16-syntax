@@ -2,15 +2,26 @@ path = require 'path'
 
 class Base16
 
+  config:
+    scheme:
+      type: 'string'
+      default: 'Default'
+      enum: ["3024", "Ashes", "Atelier Dune", "Atelier Forest", "Atelier Heath", "Atelier Lakeside", "Atelier Seaside", "Bespin", "Brewer", "Chalk", "Codeschool", "Default", "Eighties", "Embers", "Google", "Grayscale", "Greenscreen", "Isotope", "Marrakesh", "Mocha", "Monokai", "Ocean", "Paraiso", "Railscasts", "Shapeshifter", "Solarized", "Tomorrow", "Tube", "Twilight"]
+    style:
+      type: 'string'
+      default: 'Dark'
+      enum: ["Dark", "Light"]
+    matchUserInterfaceTheme:
+      type: 'boolean'
+      default: true
+      description: "When enabled the style will be matched to the current UI theme by default."
+
   activate: ->
     ThemeManagerPlus = require './theme-manager-plus'
     @themes = new ThemeManagerPlus
     @packageName = require('../package.json').name
-    atom.config.setDefaults "#{@packageName}", scheme: 'default'
-    atom.config.setDefaults "#{@packageName}", style: 'dark'
     if /light/.test atom.config.get('core.themes').toString()
-      atom.config.setDefaults "#{@packageName}", style: 'light'
-    atom.config.setDefaults "#{@packageName}", matchUserInterfaceTheme: true
+      atom.config.setDefaults "#{@packageName}", style: 'Light'
     atom.config.observe "#{@packageName}.scheme", => @enableConfigTheme()
     atom.config.observe "#{@packageName}.style", => @enableConfigTheme()
     atom.workspaceView.command "#{@packageName}:select-theme", @createSelectListView
@@ -38,12 +49,17 @@ class Base16
     scheme is @activeScheme and style is @activeStyle
 
   getStylePath: (style) ->
-    path.join __dirname, "..", "themes", "styles", "#{style}"
+    path.join __dirname, "..", "themes", "styles", "#{@getNormalizedName style}"
 
   getSchemeImport: (scheme) ->
     """
-    @import "../schemes/#{scheme}";
+    @import "../schemes/#{@getNormalizedName scheme}";
     """
+
+  getNormalizedName: (name) ->
+    "#{name}"
+      .replace ' ', '-'
+      .replace /\b\w/g, (character) -> character.toLowerCase()
 
   enableDefaultTheme: ->
     scheme = atom.config.getDefault "#{@packageName}.scheme"
@@ -57,12 +73,6 @@ class Base16
   createSelectListView: =>
     Base16SelectListView = require './base16-select-list-view'
     new Base16SelectListView @
-
-  getSchemesDir: ->
-    path.join __dirname, "..", "themes", "schemes"
-
-  getStylesDir: ->
-    path.join __dirname, "..", "themes", "styles"
 
   isConfigTheme: (scheme, style) ->
     configScheme = atom.config.get "#{@packageName}.scheme"

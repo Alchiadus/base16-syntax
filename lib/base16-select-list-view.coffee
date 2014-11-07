@@ -43,19 +43,14 @@ class Base16SelectListView extends SelectListView
     @base16.enableConfigTheme() unless @confirming
 
   getThemes: ->
-    schemes = fs.readdirSync @base16.getSchemesDir()
-      .map (scheme) -> scheme.replace /.less/, ''
+    schemes = atom.config.getSchema('base16-syntax.scheme').enum
     if atom.config.get "#{@base16.packageName}.matchUserInterfaceTheme"
       styles = [atom.config.getDefault "#{@base16.packageName}.style"]
     else
-      styles = fs.readdirSync @base16.getStylesDir()
-        .map (style) -> style.replace /.less/, ''
+      styles = atom.config.getSchema('base16-syntax.style').enum
     themes = []
     schemes.forEach (scheme) -> styles.forEach (style) ->
-      name = "#{scheme} (#{style})"
-        .replace /-/, ' '
-        .replace /\b\w/g, (character) -> character.toUpperCase()
-      themes.push scheme: scheme, style: style, name: name
+      themes.push scheme: scheme, style: style, name: "#{scheme} (#{style})"
     themes
 
 module.exports = Base16SelectListView
