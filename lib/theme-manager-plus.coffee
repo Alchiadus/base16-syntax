@@ -20,7 +20,6 @@ class ThemeManagerPlus
       atom.themes.applyStylesheet fullPath, content
     else
       throw new Error "Could not find a file at path '#{lessStylesheetPath}'"
-    fullPath
 
   loadLessStylesheet: (lessStylesheetPath, preliminaryContent = '') ->
     try

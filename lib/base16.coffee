@@ -38,7 +38,8 @@ class Base16
     atom.themes.removeStylesheet @getStylePath @activeStyle
     try
       # Try to enable the requested theme.
-      @themes.requireLessStylesheet @getStylePath(style), @getSchemeImport(scheme)
+      @activeTheme?.dispose()
+      @activeTheme = @themes.requireLessStylesheet @getStylePath(style), @getSchemeImport(scheme)
       @activeScheme = scheme
       @activeStyle = style
     catch
