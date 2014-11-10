@@ -1,3 +1,12 @@
+0.2.0
+=====
+
+## New Features
+- The configuration settings for schemes and styles have been updated to make use of the drop down functionality introduced in Atom 0.134.0.
+
+## Bug Fixes
+- Fixed an issue where a light theme could not be activated after a dark theme had been activated and vise versa.
+
 0.1.2
 =====
 
