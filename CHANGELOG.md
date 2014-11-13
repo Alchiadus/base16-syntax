@@ -1,3 +1,9 @@
+0.2.1
+=====
+
+## Bug Fixes
+- Fixed a mistake in the required Atom version.
+
 0.2.0
 =====
 
