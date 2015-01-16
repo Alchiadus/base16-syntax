@@ -34,8 +34,6 @@ class Base16
   enableTheme: (scheme, style) ->
     # No need to enable the theme if it is already active.
     return if @isActiveTheme scheme, style
-    # Disable the currently active theme.
-    atom.themes.removeStylesheet @getStylePath @activeStyle
     try
       # Try to enable the requested theme.
       @activeTheme?.dispose()
