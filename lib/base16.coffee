@@ -1,5 +1,7 @@
 path = require 'path'
 
+ThemeManagerPlus = require './theme-manager-plus'
+
 class Base16
 
   config:
@@ -17,8 +19,7 @@ class Base16
       description: "When enabled the style will be matched to the current UI theme by default."
 
   activate: ->
-    ThemeManagerPlus = require './theme-manager-plus'
-    @themes = new ThemeManagerPlus
+    @themeManagerPlus = new ThemeManagerPlus
     @packageName = require('../package.json').name
     if /light/.test atom.config.get('core.themes').toString()
       atom.config.setDefaults "#{@packageName}", style: 'Light'
@@ -37,7 +38,7 @@ class Base16
     try
       # Try to enable the requested theme.
       @activeTheme?.dispose()
-      @activeTheme = @themes.requireLessStylesheet @getStylePath(style), @getSchemeImport(scheme)
+      @activeTheme = @themeManagerPlus.requireLessStylesheet @getStylePath(style), @getSchemeImport(scheme)
       @activeScheme = scheme
       @activeStyle = style
     catch
