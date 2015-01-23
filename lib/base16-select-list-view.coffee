@@ -1,6 +1,3 @@
-fs = require 'fs'
-path = require 'path'
-
 {SelectListView} = require 'atom'
 
 class Base16SelectListView extends SelectListView
