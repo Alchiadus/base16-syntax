@@ -1,4 +1,5 @@
 path = require 'path'
+{CompositeDisposable} = require 'atom'
 
 ThemeManagerPlus = require './theme-manager-plus'
 
@@ -19,13 +20,17 @@ class Base16
       description: "When enabled the style will be matched to the current UI theme by default."
 
   activate: ->
+    @disposables = new CompositeDisposable
     @themeManagerPlus = new ThemeManagerPlus
     @packageName = require('../package.json').name
     if /light/.test atom.config.get('core.themes').toString()
       atom.config.setDefaults "#{@packageName}", style: 'Light'
-    atom.config.observe "#{@packageName}.scheme", => @enableConfigTheme()
-    atom.config.observe "#{@packageName}.style", => @enableConfigTheme()
+    @disposables.add atom.config.observe "#{@packageName}.scheme", => @enableConfigTheme()
+    @disposables.add atom.config.observe "#{@packageName}.style", => @enableConfigTheme()
     atom.workspaceView.command "#{@packageName}:select-theme", @createSelectListView
+
+  deactivate: ->
+    @disposables.dispose()
 
   enableConfigTheme: ->
     scheme = atom.config.get "#{@packageName}.scheme"
@@ -79,9 +84,5 @@ class Base16
     configScheme = atom.config.get "#{@packageName}.scheme"
     configStyle = atom.config.get "#{@packageName}.style"
     scheme is configScheme and style is configStyle
-
-  destroy: ->
-    atom.config.unobserve "#{@packageName}.scheme"
-    atom.config.unobserve "#{@packageName}.style"
 
 module.exports = new Base16
