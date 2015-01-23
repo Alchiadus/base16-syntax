@@ -71,7 +71,8 @@ class Base16
 
   createSelectListView: =>
     Base16SelectListView = require './base16-select-list-view'
-    new Base16SelectListView @
+    base16SelectListView = new Base16SelectListView @
+    base16SelectListView.attach()
 
   isConfigTheme: (scheme, style) ->
     configScheme = atom.config.get "#{@packageName}.scheme"

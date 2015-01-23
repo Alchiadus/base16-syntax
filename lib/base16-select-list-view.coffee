@@ -1,16 +1,11 @@
-{SelectListView} = require 'atom'
+{SelectListView} = require 'atom-space-pen-views'
 
 class Base16SelectListView extends SelectListView
 
   initialize: (@base16) ->
     super
-    @addClass 'overlay from-top'
     @list.addClass 'mark-active'
     @setItems @getThemes()
-    atom.workspaceView.append @
-    @focusFilterEditor()
-    @selectItemView @list.find 'li:last'
-    @selectItemView @list.find '.active'
     @initialized = true
 
   viewForItem: (theme) ->
@@ -38,6 +33,15 @@ class Base16SelectListView extends SelectListView
   cancel: ->
     super
     @base16.enableConfigTheme() unless @confirming
+
+  cancelled: ->
+    @panel?.destroy()
+
+  attach: ->
+    @panel ?= atom.workspace.addModalPanel(item: this)
+    @selectItemView @list.find 'li:last'
+    @selectItemView @list.find '.active'
+    @focusFilterEditor()
 
   getThemes: ->
     schemes = atom.config.getSchema("#{@base16.packageName}.scheme").enum
