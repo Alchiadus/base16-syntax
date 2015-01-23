@@ -27,7 +27,7 @@ class Base16
       atom.config.setDefaults "#{@packageName}", style: 'Light'
     @disposables.add atom.config.observe "#{@packageName}.scheme", => @enableConfigTheme()
     @disposables.add atom.config.observe "#{@packageName}.style", => @enableConfigTheme()
-    atom.workspaceView.command "#{@packageName}:select-theme", @createSelectListView
+    @disposables.add atom.commands.add 'atom-workspace', "#{@packageName}:select-theme", @createSelectListView
 
   deactivate: ->
     @disposables.dispose()
