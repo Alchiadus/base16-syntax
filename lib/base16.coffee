@@ -1,7 +1,6 @@
+fs = require 'fs'
 path = require 'path'
 {CompositeDisposable} = require 'atom'
-
-ThemeManagerPlus = require './theme-manager-plus'
 
 class Base16
 
@@ -21,7 +20,6 @@ class Base16
 
   activate: ->
     @disposables = new CompositeDisposable
-    @themeManagerPlus = new ThemeManagerPlus
     @packageName = require('../package.json').name
     if /light/.test atom.config.get('core.themes').toString()
       atom.config.setDefaults "#{@packageName}", style: 'Light'
@@ -43,7 +41,7 @@ class Base16
     try
       # Try to enable the requested theme.
       @activeTheme?.dispose()
-      @activeTheme = @themeManagerPlus.requireLessStylesheet @getStylePath(style), @getSchemeImport(scheme)
+      @activeTheme = @applyStylesheet @getStylePath(style), @getSchemeImport(scheme)
       @activeScheme = scheme
       @activeStyle = style
     catch
@@ -53,8 +51,13 @@ class Base16
   isActiveTheme: (scheme, style) ->
     scheme is @activeScheme and style is @activeStyle
 
+  applyStylesheet: (sourcePath, preliminaryContent) ->
+    stylesheetContent = fs.readFileSync sourcePath, 'utf8'
+    source = atom.themes.lessCache.cssForFile sourcePath, [preliminaryContent, stylesheetContent].join '\n'
+    atom.styles.addStyleSheet source, sourcePath: sourcePath, priority: 1, context: 'atom-text-editor'
+
   getStylePath: (style) ->
-    path.join __dirname, "..", "themes", "styles", "#{@getNormalizedName style}"
+    path.join __dirname, "..", "themes", "styles", "#{@getNormalizedName style}.less"
 
   getSchemeImport: (scheme) ->
     """
