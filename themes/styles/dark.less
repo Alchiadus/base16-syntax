@@ -2,170 +2,243 @@
 
 @import "atom-text-editor";
 
-.variable.parameter.function {
-  color: @base16-color-base05;
-}
-
-.comment, .punctuation.definition.comment {
+.comment {
   color: @base16-color-base03;
 }
 
-.punctuation.definition.string, .punctuation.definition.variable, .punctuation.definition.string, .punctuation.definition.parameters, .punctuation.definition.string, .punctuation.definition.array {
-  color: @base16-color-base05;
+.constant {
+  color: @base16-color-base09;
+
+  &.character {
+    &.escape {
+      color: @base16-color-base0C;
+    }
+  }
+
+  &.numeric {
+    color: @base16-color-base09;
+  }
+
+  &.other {
+    &.color {
+      color: @base16-color-base0C;
+    }
+
+    &.symbol {
+      color: @base16-color-base0B;
+    }
+  }
+}
+
+.entity {
+  &.name {
+    &.class {
+      color: @base16-color-base0A;
+    }
+
+    &.function {
+      color: @base16-color-base0D;
+    }
+
+    &.section {
+      color: @base16-color-base0D;
+    }
+
+    &.tag {
+      color: @base16-color-base08;
+    }
+
+    &.type {
+      &.class {
+        color: @base16-color-base0A;
+      }
+    }
+  }
+
+  &.other {
+    &.attribute-name {
+      color: @base16-color-base09;
+
+      &.id {
+        color: @base16-color-base0D;
+      }
+    }
+
+    &.inherited-class {
+      color: @base16-color-base0B;
+    }
+  }
+}
+
+.invalid.illegal {
+  color: @base16-color-base00;
+  background-color: @base16-color-base08;
+}
+
+.keyword {
+  color: @base16-color-base0E;
+
+  &.operator {
+    color: @base16-color-base05;
+  }
+
+  &.other {
+    &.special-method {
+      color: @base16-color-base0D;
+    }
+
+    &.unit {
+      color: @base16-color-base09;
+    }
+  }
+}
+
+.markup {
+  &.bold {
+    font-weight: bold;
+    color: @base16-color-base0A;
+  }
+
+  &.changed {
+    color: @base16-color-base0E;
+  }
+
+  &.deleted {
+    color: @base16-color-base08;
+  }
+
+  &.heading .punctuation.definition.heading {
+    color: @base16-color-base0D;
+  }
+
+  &.inserted {
+    color: @base16-color-base0B;
+  }
+
+  &.italic {
+    font-style: italic;
+    color: @base16-color-base0E;
+  }
+
+  &.list {
+    color: @base16-color-base08;
+  }
+
+  &.quote {
+    color: @base16-color-base09;
+  }
+
+  &.raw {
+    &.inline {
+      color: @base16-color-base0B;
+    }
+  }
+}
+
+.meta {
+  &.class {
+    color: @base16-color-base07;
+  }
+
+  &.link {
+    color: @base16-color-base09;
+  }
+
+  &.require {
+    color: @base16-color-base0D;
+  }
+
+  &.selector {
+    color: @base16-color-base0E;
+  }
+
+  &.separator {
+    color: @base16-color-base05;
+    background-color: @base16-color-base02;
+  }
 }
 
 .none {
   color: @base16-color-base05;
 }
 
-.keyword.operator {
-  color: @base16-color-base05;
-}
+.punctuation {
+  &.definition {
+    &.array,
+    &.parameters,
+    &.string,
+    &.variable {
+      color: @base16-color-base05;
+    }
 
-.keyword {
-  color: @base16-color-base0E;
-}
+    &.bold {
+      font-weight: bold;
+      color: @base16-color-base0A;
+    }
 
-.variable {
-  color: @base16-color-base08;
-}
+    &.comment {
+      color: @base16-color-base03;
+    }
 
-.entity.name.function, .meta.require, .support.function.any-method {
-  color: @base16-color-base0D;
-}
+    &.entity {
+      color: @base16-color-base0D;
+    }
 
-.support.class, .entity.name.class, .entity.name.type.class {
-  color: @base16-color-base0A;
-}
+    &.italic {
+      font-style: italic;
+      color: @base16-color-base0E;
+    }
+  }
 
-.meta.class {
-  color: @base16-color-base07;
-}
-
-.keyword.other.special-method {
-  color: @base16-color-base0D;
+  &.section {
+    &.embedded {
+      color: @base16-color-base0F;
+    }
+  }
 }
 
 .storage {
   color: @base16-color-base0E;
 }
 
-.support.function {
-  color: @base16-color-base0C;
-}
-
-.string, .constant.other.symbol, .entity.other.inherited-class {
+.string {
   color: @base16-color-base0B;
+
+  &.other {
+    &.link {
+      color: @base16-color-base08;
+    }
+  }
+
+  &.regexp {
+    color: @base16-color-base0C;
+  }
 }
 
-.constant.numeric {
-  color: @base16-color-base09;
+.support {
+  &.class {
+    color: @base16-color-base0A;
+  }
+
+  &.function {
+    color: @base16-color-base0C;
+
+    &.any-method {
+      color: @base16-color-base0D;
+    }
+  }
 }
 
-.none {
-  color: @base16-color-base09;
-}
-
-.none {
-  color: @base16-color-base09;
-}
-
-.constant {
-  color: @base16-color-base09;
-}
-
-.entity.name.tag {
+.variable {
   color: @base16-color-base08;
-}
 
-.entity.other.attribute-name {
-  color: @base16-color-base09;
-}
+  &.interpolation {
+    color: @base16-color-base0F;
+  }
 
-.entity.other.attribute-name.id, .punctuation.definition.entity {
-  color: @base16-color-base0D;
-}
-
-.meta.selector {
-  color: @base16-color-base0E;
-}
-
-.none {
-  color: @base16-color-base09;
-}
-
-.markup.heading .punctuation.definition.heading, .entity.name.section {
-  color: @base16-color-base0D;
-}
-
-.keyword.other.unit {
-  color: @base16-color-base09;
-}
-
-.markup.bold, .punctuation.definition.bold {
-  font-weight: bold;
-  color: @base16-color-base0A;
-}
-
-.markup.italic, .punctuation.definition.italic {
-  font-style: italic;
-  color: @base16-color-base0E;
-}
-
-.markup.raw.inline {
-  color: @base16-color-base0B;
-}
-
-.string.other.link {
-  color: @base16-color-base08;
-}
-
-.meta.link {
-  color: @base16-color-base09;
-}
-
-.markup.list {
-  color: @base16-color-base08;
-}
-
-.markup.quote {
-  color: @base16-color-base09;
-}
-
-.meta.separator {
-  color: @base16-color-base05;
-  background-color: @base16-color-base02;
-}
-
-.markup.inserted {
-  color: @base16-color-base0B;
-}
-
-.markup.deleted {
-  color: @base16-color-base08;
-}
-
-.markup.changed {
-  color: @base16-color-base0E;
-}
-
-.constant.other.color {
-  color: @base16-color-base0C;
-}
-
-.string.regexp {
-  color: @base16-color-base0C;
-}
-
-.constant.character.escape {
-  color: @base16-color-base0C;
-}
-
-.punctuation.section.embedded, .variable.interpolation {
-  color: @base16-color-base0F;
-}
-
-.invalid.illegal {
-  color: @base16-color-base00;
-  background-color: @base16-color-base08;
+  &.parameter {
+    &.function {
+      color: @base16-color-base05;
+    }
+  }
 }
