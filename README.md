@@ -48,7 +48,7 @@ Each color scheme comes in a dark and light style.
 
 ## Install Base16 Syntax
 
-Base16 Syntax can be installed by going to the _Settings_ view (`cmd-,`). Select the _Themes_ section on the left side and type in `Base16` in the _Search themes..._ search box. Click on the _Install_ button on the Base16 Syntax card.
+Base16 Syntax can be installed by going to the _Settings_ view (`cmd-,`). Select the _Install_ section on the left, hit the _Themes_ button and search for `Base16` in the search box. Click on _Install_ on the Base16 Syntax card.
 
 Alternatively, open a terminal and type in:
 
@@ -68,7 +68,7 @@ The theme can be changed by choosing a different `scheme` or `style` from the dr
 
 Alternatively, the theme can be changed in the Preview Mode. Toggle the _Command Palette_ (`ctrl-shift-P`). Type in `Base16 Syntax: Select Theme` and choose another theme from the list. While browsing through the list of available themes a live preview of each selected theme is automatically applied to all open files.
 
-Note: by default, only the styles matching the UI theme are shown in the Preview Mode, i.e. only dark styles are shown when using a dark UI theme and only light styles are shown when using a light UI theme. This can be disabled by going to the _Settings_ view (`cmd-,`). Select the `Base16 Syntax` package section on the left side and uncheck `Match User Interface Theme`.
+Note: by default, only the styles matching the UI theme are shown in the Preview Mode, i.e. only dark styles are shown when using a dark UI theme and only light styles are shown when using a light UI theme. This can be disabled by going to the `Base16 Syntax` _Settings_ view and uncheck `Match User Interface Theme`.
 
 ## Credits
 
