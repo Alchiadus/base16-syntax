@@ -2,7 +2,7 @@
   "name": "base16-syntax",
   "theme": "syntax",
   "main": "./lib/base16",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "A Base16 syntax theme with support for all Base16 color schemes and styles.",
   "repository": "https://github.com/alchiadus/base16-syntax",
   "license": "MIT",
