@@ -7,6 +7,7 @@ A Base16 syntax theme with support for all Base16 color schemes and styles.
 
 The following Base16 color schemes are included:
 - 3024
+- Apathy
 - Ashes
 - Atelier Dune
 - Atelier Forest
@@ -15,23 +16,30 @@ The following Base16 color schemes are included:
 - Atelier Seaside
 - Bespin
 - Brewer
+- Bright
 - Chalk
 - Codeschool
+- Colors
 - Default
 - Eighties
 - Embers
+- Flat
 - Google
 - Grayscale
 - Greenscreen
+- Harmonic
+- Hopscotch
 - Isotope
 - Marrakesh
 - Mocha
 - Monokai
 - Ocean
 - Paraiso
+- Pop
 - Railscasts
 - Shapeshifter
 - Solarized
+- Summerfruit
 - Tomorrow
 - Tube
 - Twilight
