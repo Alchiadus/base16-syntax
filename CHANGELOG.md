@@ -1,3 +1,26 @@
+1.0.0
+=====
+
+This update brings full support for Atom's 1.0 API.
+
+It may be required to empty Atom's less compile cache by removing the files inside `~/.atom/compile-cache/less` and restarting Atom.
+
+## New Features
+- Shadow DOM support
+- New themes:
+  - Apathy
+  - Bright
+  - Colors
+  - Flat
+  - Harmonic
+  - Hopscotch
+  - Pop
+  - Summerfruit
+
+## Bug Fixes
+- Fixed an issue where the wrap guide was incorrectly styled or not styled at all.
+- Fixed an issue where markup headings were not properly styled.
+
 0.2.1
 =====
 
