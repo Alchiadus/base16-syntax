@@ -8,7 +8,37 @@ class Base16
     scheme:
       type: 'string'
       default: 'Default'
-      enum: ["3024", "Ashes", "Atelier Dune", "Atelier Forest", "Atelier Heath", "Atelier Lakeside", "Atelier Seaside", "Bespin", "Brewer", "Chalk", "Codeschool", "Default", "Eighties", "Embers", "Google", "Grayscale", "Greenscreen", "Isotope", "Marrakesh", "Mocha", "Monokai", "Ocean", "Paraiso", "Railscasts", "Shapeshifter", "Solarized", "Tomorrow", "Tube", "Twilight"]
+      enum: [
+        "3024",
+        "Ashes",
+        "Atelier Dune",
+        "Atelier Forest",
+        "Atelier Heath",
+        "Atelier Lakeside",
+        "Atelier Seaside",
+        "Bespin",
+        "Brewer",
+        "Chalk",
+        "Codeschool",
+        "Default",
+        "Eighties",
+        "Embers",
+        "Google",
+        "Grayscale",
+        "Greenscreen",
+        "Isotope",
+        "Marrakesh",
+        "Mocha",
+        "Monokai",
+        "Ocean",
+        "Paraiso",
+        "Railscasts",
+        "Shapeshifter",
+        "Solarized",
+        "Tomorrow",
+        "Tube",
+        "Twilight"
+      ]
     style:
       type: 'string'
       default: 'Dark'
