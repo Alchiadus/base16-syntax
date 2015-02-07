@@ -1,3 +1,9 @@
+1.0.1
+=====
+
+## Bug Fixes
+- Fixed an issue causing apm not to upgrade to 1.0.0
+
 1.0.0
 =====
 
