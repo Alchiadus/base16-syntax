@@ -1,3 +1,9 @@
+1.1.0
+=====
+
+## Bug Fixes
+- Fixed a deprecated call.
+
 1.0.1
 =====
 
