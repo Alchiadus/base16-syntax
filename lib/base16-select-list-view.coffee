@@ -46,7 +46,7 @@ class Base16SelectListView extends SelectListView
   getThemes: ->
     schemes = atom.config.getSchema("#{@base16.packageName}.scheme").enum
     if atom.config.get "#{@base16.packageName}.matchUserInterfaceTheme"
-      styles = [atom.config.getDefault "#{@base16.packageName}.style"]
+      styles = [atom.config.defaultSettings["#{@base16.packageName}"].style]
     else
       styles = atom.config.getSchema("#{@base16.packageName}.style").enum
     themes = []
