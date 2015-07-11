@@ -1,3 +1,9 @@
+1.2.0
+=====
+
+## Bug Fixes
+- Fixed an incorrect selector.
+
 1.1.0
 =====
 
