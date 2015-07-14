@@ -1,3 +1,9 @@
+1.3.0
+=====
+
+## Bug Fixes
+- Fixed attribution. Added respective authors to each scheme's LESS file.
+
 1.2.0
 =====
 
