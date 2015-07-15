@@ -1,3 +1,12 @@
+1.4.2
+=====
+
+## Bug Fixes
+- Fixed an error being thrown immediately after upgrading from below `v1.4.0` inside Atom, preventing the updated theme from loading (again). The issue would no longer appear after Atom was restarted.
+
+## Known Issues
+- The 'Default (Dark)' theme is loaded after upgrading. Restart (or reload) Atom to correctly load the scheme and style specified in the settings.
+
 1.4.1
 =====
 
