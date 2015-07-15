@@ -1,3 +1,10 @@
+1.4.0
+=====
+
+## Bug Fixes
+- Fixed the unavailability of the `styles/syntax-variables.less` file, which caused packages that imported the `syntax-variables` to receive incorrect (default) styling. As a result of this, all package's stylesheets are now reloaded when changing to a different scheme or style.
+- Fixed an issue where stylesheets were reloaded before the Preview Mode was properly attached, which caused a flickering in the editor.
+
 1.3.0
 =====
 
