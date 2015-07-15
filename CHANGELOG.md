@@ -1,3 +1,9 @@
+1.4.1
+=====
+
+## Bug Fixes
+- Fixed an error being thrown immediately after upgrading to `v1.4.0` inside Atom, preventing the updated theme from loading. The issue would no longer appear after Atom was restarted.
+
 1.4.0
 =====
 
