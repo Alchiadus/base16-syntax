@@ -28,8 +28,16 @@ class Base16
     return if @isActiveTheme scheme, style
     try
       # Try to enable the requested theme.
+      fs.writeFileSync @getSyntaxVariablesPath(), @getSyntaxVariablesContent(scheme, style)
       @activeTheme?.dispose()
-      @activeTheme = @applyStylesheet @getStylePath(style), @getSchemeImport(scheme)
+      activePackages = atom.packages.getActivePackages()
+      if activePackages.length is 0
+        # No packages have been activated yet. Only reload own stylesheets.
+        @activeTheme = @applyStylesheet @getIndexStylesheetPath()
+      else
+        # Reload the stylesheets of all active packages.
+        @activeTheme = null
+        activePackage.reloadStylesheets() for activePackage in activePackages
       @activeScheme = scheme
       @activeStyle = style
     catch
@@ -44,12 +52,20 @@ class Base16
     source = atom.themes.lessCache.cssForFile sourcePath, [preliminaryContent, stylesheetContent].join '\n'
     atom.styles.addStyleSheet source, sourcePath: sourcePath, priority: 1, context: 'atom-text-editor'
 
-  getStylePath: (style) ->
-    path.join __dirname, "..", "themes", "styles", "#{@getNormalizedName style}.less"
+  getIndexStylesheetPath: ->
+    path.join __dirname, "..", "index.less"
 
-  getSchemeImport: (scheme) ->
+  getSyntaxVariablesPath: ->
+    path.join __dirname, "..", "styles", "syntax-variables.less"
+
+  getSyntaxVariablesContent: (scheme, style) ->
     """
-    @import "../schemes/#{@getNormalizedName scheme}";
+    @base16-scheme: '#{@getNormalizedName scheme}';
+    @base16-style: '#{@getNormalizedName style}';
+
+    @import 'schemes/@{base16-scheme}';
+    @import 'syntax-variables-@{base16-style}';
+
     """
 
   getNormalizedName: (name) ->

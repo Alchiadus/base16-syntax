@@ -1,9 +1,6 @@
-@import "syntax-variables-light";
-
-@import "atom-text-editor";
-
 .comment {
-  color: @base16-color-base04;
+  .if (@base16-style, 'dark', color, @base16-color-base03);
+  .if (@base16-style, 'light', color, @base16-color-base04);
 }
 
 .constant {
@@ -33,7 +30,8 @@
 .entity {
   &.name {
     &.class {
-      color: @base16-color-base09;
+      .if (@base16-style, 'dark', color, @base16-color-base0A);
+      .if (@base16-style, 'light', color, @base16-color-base09);
     }
 
     &.function {
@@ -50,7 +48,8 @@
 
     &.type {
       &.class {
-        color: @base16-color-base09;
+        .if (@base16-style, 'dark', color, @base16-color-base0A);
+        .if (@base16-style, 'light', color, @base16-color-base09);
       }
     }
   }
@@ -71,7 +70,8 @@
 }
 
 .invalid.illegal {
-  color: @base16-color-base07;
+  .if (@base16-style, 'dark', color, @base16-color-base00);
+  .if (@base16-style, 'light', color, @base16-color-base07);
   background-color: @base16-color-base08;
 }
 
@@ -79,7 +79,8 @@
   color: @base16-color-base0E;
 
   &.operator {
-    color: @base16-color-base02;
+    .if (@base16-style, 'dark', color, @base16-color-base05);
+    .if (@base16-style, 'light', color, @base16-color-base02);
   }
 
   &.other {
@@ -96,7 +97,8 @@
 .markup {
   &.bold {
     font-weight: bold;
-    color: @base16-color-base09;
+    .if (@base16-style, 'dark', color, @base16-color-base0A);
+    .if (@base16-style, 'light', color, @base16-color-base09);
   }
 
   &.changed {
@@ -137,7 +139,8 @@
 
 .meta {
   &.class {
-    color: @base16-color-base01;
+    .if (@base16-style, 'dark', color, @base16-color-base07);
+    .if (@base16-style, 'light', color, @base16-color-base01);
   }
 
   &.link {
@@ -153,13 +156,16 @@
   }
 
   &.separator {
-    color: @base16-color-base02;
-    background-color: @base16-color-base06;
+    .if (@base16-style, 'dark', color, @base16-color-base05);
+    .if (@base16-style, 'light', color, @base16-color-base02);
+    .if (@base16-style, 'dark', background-color, @base16-color-base02);
+    .if (@base16-style, 'light', background-color, @base16-color-base06);
   }
 }
 
 .none {
-  color: @base16-color-base02;
+  .if (@base16-style, 'dark', color, @base16-color-base05);
+  .if (@base16-style, 'light', color, @base16-color-base02);
 }
 
 .punctuation {
@@ -168,16 +174,19 @@
     &.parameters,
     &.string,
     &.variable {
-      color: @base16-color-base02;
+      .if (@base16-style, 'dark', color, @base16-color-base05);
+      .if (@base16-style, 'light', color, @base16-color-base02);
     }
 
     &.bold {
       font-weight: bold;
-      color: @base16-color-base09;
+      .if (@base16-style, 'dark', color, @base16-color-base0A);
+      .if (@base16-style, 'light', color, @base16-color-base09);
     }
 
     &.comment {
-      color: @base16-color-base04;
+      .if (@base16-style, 'dark', color, @base16-color-base03);
+      .if (@base16-style, 'light', color, @base16-color-base04);
     }
 
     &.entity {
@@ -217,7 +226,8 @@
 
 .support {
   &.class {
-    color: @base16-color-base09;
+    .if (@base16-style, 'dark', color, @base16-color-base0A);
+    .if (@base16-style, 'light', color, @base16-color-base09);
   }
 
   &.function {
@@ -238,7 +248,8 @@
 
   &.parameter {
     &.function {
-      color: @base16-color-base02;
+      .if (@base16-style, 'dark', color, @base16-color-base05);
+      .if (@base16-style, 'light', color, @base16-color-base02);
     }
   }
 }
