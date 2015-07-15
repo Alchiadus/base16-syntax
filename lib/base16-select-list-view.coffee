@@ -6,7 +6,6 @@ class Base16SelectListView extends SelectListView
     super
     @list.addClass 'mark-active'
     @setItems @getThemes()
-    @initialized = true
 
   viewForItem: (theme) ->
     element = document.createElement 'li'
@@ -21,8 +20,7 @@ class Base16SelectListView extends SelectListView
   selectItemView: (view) ->
     super
     theme = @getSelectedItem()
-    # Only preview the selected theme if the list is initialized.
-    @base16.enableTheme theme.scheme, theme.style if @initialized
+    @base16.enableTheme theme.scheme, theme.style if @attached
 
   confirmed: (theme) ->
     @confirming = true
@@ -42,6 +40,7 @@ class Base16SelectListView extends SelectListView
     @selectItemView @list.find 'li:last'
     @selectItemView @list.find '.active'
     @focusFilterEditor()
+    @attached = true
 
   getThemes: ->
     schemes = atom.config.getSchema("#{@base16.packageName}.scheme").enum
