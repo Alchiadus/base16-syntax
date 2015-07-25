@@ -1,3 +1,11 @@
+1.5.0
+=====
+
+Added keywords to make the theme easier to find on https://atom.io/themes.
+
+## Bug Fixes
+- Fixed a discrepancy between the dark and light themes. The dark theme now uses `base01` for the indent and wrap guides, as well as the invisibles. This makes them more mellow against the `base00` background.
+
 1.4.2
 =====
 
