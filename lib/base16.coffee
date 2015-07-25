@@ -27,16 +27,14 @@ class Base16
     # No need to enable the theme if it is already active.
     return if @isActiveTheme scheme, style
     try
-      # Try to enable the requested theme.
+      # Write the requested theme to the `syntax-variables` file.
       fs.writeFileSync @getSyntaxVariablesPath(), @getSyntaxVariablesContent(scheme, style)
-      @activeTheme?.dispose()
       activePackages = atom.packages.getActivePackages()
       if activePackages.length is 0
-        # No packages have been activated yet. Only reload own stylesheets.
-        @activeTheme = @applyStylesheet @getIndexStylesheetPath()
+        # Reload own stylesheets to apply the requested theme.
+        atom.packages.getLoadedPackage("#{@packageName}").reloadStylesheets()
       else
-        # Reload the stylesheets of all active packages.
-        @activeTheme = null
+        # Reload the stylesheets of all packages to apply the requested theme.
         activePackage.reloadStylesheets() for activePackage in activePackages
       @activeScheme = scheme
       @activeStyle = style
@@ -46,14 +44,6 @@ class Base16
 
   isActiveTheme: (scheme, style) ->
     scheme is @activeScheme and style is @activeStyle
-
-  applyStylesheet: (sourcePath, preliminaryContent) ->
-    stylesheetContent = fs.readFileSync sourcePath, 'utf8'
-    source = atom.themes.lessCache.cssForFile sourcePath, [preliminaryContent, stylesheetContent].join '\n'
-    atom.styles.addStyleSheet source, sourcePath: sourcePath, priority: 1, context: 'atom-text-editor'
-
-  getIndexStylesheetPath: ->
-    path.join __dirname, "..", "index.less"
 
   getSyntaxVariablesPath: ->
     path.join __dirname, "..", "styles", "syntax-variables.less"
