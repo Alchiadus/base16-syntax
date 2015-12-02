@@ -20,7 +20,7 @@ class Base16SelectListView extends SelectListView
   selectItemView: (view) ->
     super
     theme = @getSelectedItem()
-    @base16.enableTheme theme.scheme, theme.style if @attached
+    @base16.enableTheme theme.scheme, theme.style, true if @attached
 
   confirmed: (theme) ->
     @confirming = true
