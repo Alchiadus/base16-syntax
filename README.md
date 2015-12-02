@@ -9,17 +9,23 @@ The following Base16 color schemes are included:
 - 3024
 - Apathy
 - Ashes
+- Atelier Cave
 - Atelier Dune
+- Atelier Estuary
 - Atelier Forest
 - Atelier Heath
 - Atelier Lakeside
+- Atelier Plateau
+- Atelier Savanna
 - Atelier Seaside
+- Atelier Sulphurpool
 - Bespin
 - Brewer
 - Bright
 - Chalk
 - Codeschool
 - Colors
+- Darktooth
 - Default
 - Eighties
 - Embers
@@ -29,20 +35,28 @@ The following Base16 color schemes are included:
 - Greenscreen
 - Harmonic
 - Hopscotch
+- Irblack
 - Isotope
+- Macintosh
 - Marrakesh
 - Mocha
 - Monokai
 - Ocean
+- OceanicNext
 - Paraiso
+- PhD
 - Pop
 - Railscasts
+- Seti
 - Shapeshifter
 - Solarized
 - Summerfruit
 - Tomorrow
 - Tube
 - Twilight
+- Yesterday Bright
+- Yesterday Night
+- Yesterday
 
 Each color scheme comes in a dark and light style.
 
