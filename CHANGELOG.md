@@ -1,3 +1,8 @@
+1.6.1
+=====
+
+Fixed an issue where not all stylesheets were reloaded after confirming.
+
 1.6.0
 =====
 
