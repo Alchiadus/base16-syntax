@@ -4,42 +4,42 @@ settings =
       type: 'string'
       default: 'Default'
       enum: [
-        "3024",
-        "Apathy",
-        "Ashes",
-        "Atelier Dune",
-        "Atelier Forest",
-        "Atelier Heath",
-        "Atelier Lakeside",
-        "Atelier Seaside",
-        "Bespin",
-        "Brewer",
-        "Bright",
-        "Chalk",
-        "Codeschool",
-        "Colors",
-        "Default",
-        "Eighties",
-        "Embers",
-        "Flat",
-        "Google",
-        "Grayscale",
-        "Greenscreen",
-        "Harmonic",
-        "Hopscotch",
-        "Isotope",
-        "Marrakesh",
-        "Mocha",
-        "Monokai",
-        "Ocean",
-        "Paraiso",
-        "Pop",
-        "Railscasts",
-        "Shapeshifter",
-        "Solarized",
-        "Summerfruit",
-        "Tomorrow",
-        "Tube",
+        "3024"
+        "Apathy"
+        "Ashes"
+        "Atelier Dune"
+        "Atelier Forest"
+        "Atelier Heath"
+        "Atelier Lakeside"
+        "Atelier Seaside"
+        "Bespin"
+        "Brewer"
+        "Bright"
+        "Chalk"
+        "Codeschool"
+        "Colors"
+        "Default"
+        "Eighties"
+        "Embers"
+        "Flat"
+        "Google"
+        "Grayscale"
+        "Greenscreen"
+        "Harmonic"
+        "Hopscotch"
+        "Isotope"
+        "Marrakesh"
+        "Mocha"
+        "Monokai"
+        "Ocean"
+        "Paraiso"
+        "Pop"
+        "Railscasts"
+        "Shapeshifter"
+        "Solarized"
+        "Summerfruit"
+        "Tomorrow"
+        "Tube"
         "Twilight"
       ]
     style:
