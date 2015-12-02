@@ -23,14 +23,14 @@ class Base16
     style = atom.config.get "#{@packageName}.style"
     @enableTheme scheme, style
 
-  enableTheme: (scheme, style, preview = false) ->
+  enableTheme: (scheme, style) ->
     # No need to enable the theme if it is already active.
-    return if @isActiveTheme scheme, style
+    return if @isActiveTheme scheme, style unless @isPreviewConfirmed
     try
       # Write the requested theme to the `syntax-variables` file.
       fs.writeFileSync @getSyntaxVariablesPath(), @getSyntaxVariablesContent(scheme, style)
       activePackages = atom.packages.getActivePackages()
-      if activePackages.length is 0 or preview
+      if activePackages.length is 0 or @isPreview
         # Reload own stylesheets to apply the requested theme.
         atom.packages.getLoadedPackage("#{@packageName}").reloadStylesheets()
       else

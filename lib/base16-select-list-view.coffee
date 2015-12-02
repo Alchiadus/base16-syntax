@@ -20,10 +20,13 @@ class Base16SelectListView extends SelectListView
   selectItemView: (view) ->
     super
     theme = @getSelectedItem()
-    @base16.enableTheme theme.scheme, theme.style, true if @attached
+    @base16.isPreview = true
+    @base16.enableTheme theme.scheme, theme.style if @attached
 
   confirmed: (theme) ->
     @confirming = true
+    @base16.isPreview = false
+    @base16.isPreviewConfirmed = true
     @base16.setThemeConfig theme.scheme, theme.style
     @cancel()
     @confirming = false
@@ -31,6 +34,8 @@ class Base16SelectListView extends SelectListView
   cancel: ->
     super
     @base16.enableConfigTheme() unless @confirming
+    @base16.isPreview = false
+    @base16.isPreviewConfirmed = false
 
   cancelled: ->
     @panel?.destroy()
