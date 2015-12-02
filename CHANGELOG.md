@@ -1,3 +1,33 @@
+1.6.0
+=====
+
+Preview changed to only reload the syntax theme stylesheets when browsing through the themes. Previously, every packages' stylesheets were reloaded. This change should make the preview feel a lot more responsive.\
+*Note*: When Atom is in DevMode, every packages' stylesheets will still be reloaded. This is a feature of Atom's DevMode.
+
+Updated the following themes with tweaks from Base16 repository:
+- Atelier Dune
+- Atelier Forest
+- Atelier Health
+- Atelier Lakeside
+- Atelier Seaside
+
+## New Features
+- New themes:
+  - Atelier Cave
+  - Atelier Estuary
+  - Atelier Plateau
+  - Atelier Savanna
+  - Atelier Sulphurpool
+  - Darktooth
+  - Irblack
+  - Macintosh
+  - OceanicNext
+  - PhD
+  - Seti
+  - Yesterday Bright
+  - Yesterday Night
+  - Yesterday
+
 1.5.0
 =====
 
