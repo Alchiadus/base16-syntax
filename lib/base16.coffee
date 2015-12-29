@@ -61,7 +61,7 @@ class Base16
   getNormalizedName: (name) ->
     "#{name}"
       .replace ' ', '-'
-      .replace /\b\w/g, (character) -> character.toLowerCase()
+      .toLowerCase()
 
   enableDefaultTheme: ->
     scheme = atom.config.getDefault "#{@packageName}.scheme"
