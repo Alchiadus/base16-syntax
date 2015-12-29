@@ -1,3 +1,8 @@
+1.6.2
+=====
+
+Fixed an issue where some schemes could not be loaded on case-sensitive systems.
+
 1.6.1
 =====
 
