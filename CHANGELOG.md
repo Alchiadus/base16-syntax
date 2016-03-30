@@ -1,3 +1,10 @@
+1.7.0
+=====
+
+## New Features
+
+- VCS status colors are now based on the active scheme's colors.
+
 1.6.2
 =====
 
