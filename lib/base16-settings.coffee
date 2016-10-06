@@ -37,6 +37,7 @@ settings =
         "Isotope"
         "Macintosh"
         "Marrakesh"
+        "Materia"
         "Mocha"
         "Monokai"
         "Ocean"
