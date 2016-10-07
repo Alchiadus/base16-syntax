@@ -39,6 +39,7 @@ The following Base16 color schemes are included:
 - Isotope
 - Macintosh
 - Marrakesh
+- Materia
 - Mocha
 - Monokai
 - Ocean
@@ -54,9 +55,9 @@ The following Base16 color schemes are included:
 - Tomorrow
 - Tube
 - Twilight
+- Yesterday
 - Yesterday Bright
 - Yesterday Night
-- Yesterday
 
 Each color scheme comes in a dark and light style.
 
