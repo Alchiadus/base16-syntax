@@ -1,3 +1,24 @@
+1.8.0
+=====
+
+Requires Atom `1.13.0` or higher.
+
+Updated the syntax-theme to cope with the removal of Shadow DOM boundaries from `<atom-text-editor>` elements.
+
+## Updated Themes
+The following themes have been updated:
+- Shapeshifter
+
+## New Themes
+The following themes have been added:
+- GitHub
+- Materia
+- OneDark
+- Pico
+- Solarflare
+- Spacemacs
+- Unikitty
+
 1.7.0
 =====
 
