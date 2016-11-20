@@ -62,7 +62,7 @@
   "repository": "https://github.com/alchiadus/base16-syntax",
   "license": "MIT",
   "engines": {
-    "atom": ">=0.206.0 <2.0.0"
+    "atom": ">=1.13.0 <2.0.0"
   },
   "dependencies": {
     "atom-space-pen-views": "^2.0.0"

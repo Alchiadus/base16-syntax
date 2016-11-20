@@ -1,161 +1,161 @@
-.comment {
+.syntax--comment {
   .if (@base16-style, 'dark', color, @base16-color-base03);
   .if (@base16-style, 'light', color, @base16-color-base04);
 }
 
-.constant {
+.syntax--constant {
   color: @base16-color-base09;
 
-  &.character {
-    &.escape {
+  &.syntax--character {
+    &.syntax--escape {
       color: @base16-color-base0C;
     }
   }
 
-  &.numeric {
+  &.syntax--numeric {
     color: @base16-color-base09;
   }
 
-  &.other {
-    &.color {
+  &.syntax--other {
+    &.syntax--color {
       color: @base16-color-base0C;
     }
 
-    &.symbol {
+    &.syntax--symbol {
       color: @base16-color-base0B;
     }
   }
 }
 
-.entity {
-  &.name {
-    &.class {
+.syntax--entity {
+  &.syntax--name {
+    &.syntax--class {
       .if (@base16-style, 'dark', color, @base16-color-base0A);
       .if (@base16-style, 'light', color, @base16-color-base09);
     }
 
-    &.function {
+    &.syntax--function {
       color: @base16-color-base0D;
     }
 
-    &.section {
+    &.syntax--section {
       color: @base16-color-base0D;
     }
 
-    &.tag {
+    &.syntax--tag {
       color: @base16-color-base08;
     }
 
-    &.type {
-      &.class {
+    &.syntax--type {
+      &.syntax--class {
         .if (@base16-style, 'dark', color, @base16-color-base0A);
         .if (@base16-style, 'light', color, @base16-color-base09);
       }
     }
   }
 
-  &.other {
-    &.attribute-name {
+  &.syntax--other {
+    &.syntax--attribute-name {
       color: @base16-color-base09;
 
-      &.id {
+      &.syntax--id {
         color: @base16-color-base0D;
       }
     }
 
-    &.inherited-class {
+    &.syntax--inherited-class {
       color: @base16-color-base0B;
     }
   }
 }
 
-.invalid.illegal {
+.syntax--invalid.syntax--illegal {
   .if (@base16-style, 'dark', color, @base16-color-base00);
   .if (@base16-style, 'light', color, @base16-color-base07);
   background-color: @base16-color-base08;
 }
 
-.keyword {
+.syntax--keyword {
   color: @base16-color-base0E;
 
-  &.operator {
+  &.syntax--operator {
     .if (@base16-style, 'dark', color, @base16-color-base05);
     .if (@base16-style, 'light', color, @base16-color-base02);
   }
 
-  &.other {
-    &.special-method {
+  &.syntax--other {
+    &.syntax--special-method {
       color: @base16-color-base0D;
     }
 
-    &.unit {
+    &.syntax--unit {
       color: @base16-color-base09;
     }
   }
 }
 
-.markup {
-  &.bold {
+.syntax--markup {
+  &.syntax--bold {
     font-weight: bold;
     .if (@base16-style, 'dark', color, @base16-color-base0A);
     .if (@base16-style, 'light', color, @base16-color-base09);
   }
 
-  &.changed {
+  &.syntax--changed {
     color: @base16-color-base0E;
   }
 
-  &.deleted {
+  &.syntax--deleted {
     color: @base16-color-base08;
   }
 
-  &.heading {
+  &.syntax--heading {
     color: @base16-color-base0D;
   }
 
-  &.inserted {
+  &.syntax--inserted {
     color: @base16-color-base0B;
   }
 
-  &.italic {
+  &.syntax--italic {
     font-style: italic;
     color: @base16-color-base0E;
   }
 
-  &.list {
+  &.syntax--list {
     color: @base16-color-base08;
   }
 
-  &.quote {
+  &.syntax--quote {
     color: @base16-color-base09;
   }
 
-  &.raw {
-    &.inline {
+  &.syntax--raw {
+    &.syntax--inline {
       color: @base16-color-base0B;
     }
   }
 }
 
-.meta {
-  &.class {
+.syntax--meta {
+  &.syntax--class {
     .if (@base16-style, 'dark', color, @base16-color-base07);
     .if (@base16-style, 'light', color, @base16-color-base01);
   }
 
-  &.link {
+  &.syntax--link {
     color: @base16-color-base09;
   }
 
-  &.require {
+  &.syntax--require {
     color: @base16-color-base0D;
   }
 
-  &.selector {
+  &.syntax--selector {
     color: @base16-color-base0E;
   }
 
-  &.separator {
+  &.syntax--separator {
     .if (@base16-style, 'dark', color, @base16-color-base05);
     .if (@base16-style, 'light', color, @base16-color-base02);
     .if (@base16-style, 'dark', background-color, @base16-color-base02);
@@ -163,91 +163,91 @@
   }
 }
 
-.none {
+.syntax--none {
   .if (@base16-style, 'dark', color, @base16-color-base05);
   .if (@base16-style, 'light', color, @base16-color-base02);
 }
 
-.punctuation {
-  &.definition {
-    &.array,
-    &.parameters,
-    &.string,
-    &.variable {
+.syntax--punctuation {
+  &.syntax--definition {
+    &.syntax--array,
+    &.syntax--parameters,
+    &.syntax--string,
+    &.syntax--variable {
       .if (@base16-style, 'dark', color, @base16-color-base05);
       .if (@base16-style, 'light', color, @base16-color-base02);
     }
 
-    &.bold {
+    &.syntax--bold {
       font-weight: bold;
       .if (@base16-style, 'dark', color, @base16-color-base0A);
       .if (@base16-style, 'light', color, @base16-color-base09);
     }
 
-    &.comment {
+    &.syntax--comment {
       .if (@base16-style, 'dark', color, @base16-color-base03);
       .if (@base16-style, 'light', color, @base16-color-base04);
     }
 
-    &.entity {
+    &.syntax--entity {
       color: @base16-color-base0D;
     }
 
-    &.italic {
+    &.syntax--italic {
       font-style: italic;
       color: @base16-color-base0E;
     }
   }
 
-  &.section {
-    &.embedded {
+  &.syntax--section {
+    &.syntax--embedded {
       color: @base16-color-base0F;
     }
   }
 }
 
-.storage {
+.syntax--storage {
   color: @base16-color-base0E;
 }
 
-.string {
+.syntax--string {
   color: @base16-color-base0B;
 
-  &.other {
-    &.link {
+  &.syntax--other {
+    &.syntax--link {
       color: @base16-color-base08;
     }
   }
 
-  &.regexp {
+  &.syntax--regexp {
     color: @base16-color-base0C;
   }
 }
 
-.support {
-  &.class {
+.syntax--support {
+  &.syntax--class {
     .if (@base16-style, 'dark', color, @base16-color-base0A);
     .if (@base16-style, 'light', color, @base16-color-base09);
   }
 
-  &.function {
+  &.syntax--function {
     color: @base16-color-base0C;
 
-    &.any-method {
+    &.syntax--any-method {
       color: @base16-color-base0D;
     }
   }
 }
 
-.variable {
+.syntax--variable {
   color: @base16-color-base08;
 
-  &.interpolation {
+  &.syntax--interpolation {
     color: @base16-color-base0F;
   }
 
-  &.parameter {
-    &.function {
+  &.syntax--parameter {
+    &.syntax--function {
       .if (@base16-style, 'dark', color, @base16-color-base05);
       .if (@base16-style, 'light', color, @base16-color-base02);
     }

@@ -1,5 +1,4 @@
-atom-text-editor,
-:host {
+atom-text-editor {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
 
@@ -24,12 +23,12 @@ atom-text-editor,
   }
 
   .search-results .region {
-    .marker {
+    .syntax--marker {
       background-color: transparent;
       border: @syntax-result-marker-color;
     }
 
-    .marker.current-result {
+    .syntax--marker.current-result {
       border: @syntax-result-marker-color-selected;
     }
   }
