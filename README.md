@@ -30,6 +30,7 @@ The following Base16 color schemes are included:
 - Eighties
 - Embers
 - Flat
+- GitHub
 - Google
 - Grayscale
 - Greenscreen
@@ -44,20 +45,25 @@ The following Base16 color schemes are included:
 - Monokai
 - Ocean
 - OceanicNext
+- OneDark
 - Paraiso
 - PhD
+- Pico
 - Pop
 - Railscasts
 - Seti
 - Shapeshifter
+- Solarflare
 - Solarized
+- Spacemacs
 - Summerfruit
 - Tomorrow
 - Tube
 - Twilight
-- Yesterday
+- Unikitty
 - Yesterday Bright
 - Yesterday Night
+- Yesterday
 
 Each color scheme comes in a dark and light style.
 
