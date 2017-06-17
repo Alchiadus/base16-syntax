@@ -1,3 +1,11 @@
+1.8.1
+=====
+
+## Enhancements
+
+- Highlight `stdint` types. [#26](https://github.com/Alchiadus/base16-syntax/pull/26)
+- Highlight operators, e.g. the `in` keyword in Python, but keep arithmetic operators lowlighted. [#27](https://github.com/Alchiadus/base16-syntax/issues/27)
+
 1.8.0
 =====
 
