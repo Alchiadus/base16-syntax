@@ -49,6 +49,7 @@ settings =
         "Pico"
         "Pop"
         "Railscasts"
+        "Rebecca"
         "Seti"
         "Shapeshifter"
         "Solarflare"
